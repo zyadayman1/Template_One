@@ -1,15 +1,38 @@
 /* start variables */
 
 /* end variables */
+
 /* start global rules */
 * {
-    /* import google font */
-    font-family: "Work Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-}
-body {
-    /* to calculut the padding & margin & border from the elemint width */
-    box-sizing: border-box;
+  /* import google font */
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  /* to calculut the padding & margin & border from the elemint width */
+  box-sizing: border-box;
 }
 /* end global rules */
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  background-color: blanchedalmond;
+}
+/* small from max to 768 */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* medium from max to 992 */
+@media (min-width: 992px) {
+  .container {
+    width: 950px;
+  }
+}
+/* large from max to 1200 */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170;
+  }
+}
