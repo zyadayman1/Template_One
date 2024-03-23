@@ -1,7 +1,9 @@
 /* start variables */
 :root {
   --main-color: #10cab7;
-  --branch-color: #2c4755;
+  --secondary-color: #2c4755;
+  --sec-padding: 60px;
+  --sec-background: #f6f6f6;
 }
 /* end variables */
 
@@ -100,7 +102,7 @@
 }
 .haeder .container .links ul {
   list-style: none;
-  background-color: #f6f6f6;
+  background-color: var(--sec-background);
   margin: 0;
   padding: 0;
   position: absolute;
@@ -173,9 +175,9 @@
 
 /* start features */
 .features {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-color: #f6f6f6;
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  background-color: var(--sec-background);
 }
 .features .container {
   display: grid;
@@ -202,8 +204,8 @@
 
 /* start Services */
 .services {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
 }
 .services .services-content {
   display: grid;
@@ -245,7 +247,7 @@
   position: absolute;
   width: 90px;
   height: calc(100% + 80px);
-  background-color: var(--branch-color);
+  background-color: var(--secondary-color);
   top: -40px;
   right: 27px;
   z-index: -1;
@@ -259,3 +261,34 @@
   }
 }
 /* end Services */
+
+/* start portfolio */
+.portfolio {
+  padding-top: var(--sec-padding);
+  padding-bottom: var(--sec-padding);
+  background-color: var(--sec-background);
+}
+.portfolio .portfolio-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 150px;
+}
+.portfolio .portfolio-content .card {
+  background-color: white;
+}
+.portfolio .portfolio-content .card img {
+  max-width: 100%;
+}
+.portfolio .portfolio-content .card .info {
+  padding: 20px;
+}
+.portfolio .portfolio-content .card .info h3 {
+  margin: 0 0 20px;
+}
+.portfolio .portfolio-content .card .info p {
+  margin-bottom: 0;
+  line-height: 1.6;
+  color: #777;
+}
+/* end portfolio */
