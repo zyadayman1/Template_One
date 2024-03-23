@@ -11,12 +11,9 @@
   /* to calculut the padding & margin & border from the elemint width */
   box-sizing: border-box;
 }
-/* end global rules */
-
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  background-color: blanchedalmond;
 }
 /* small from max to 768 */
 @media (min-width: 768px) {
@@ -35,4 +32,80 @@
   .container {
     width: 1170;
   }
+}
+/* end global rules */
+
+/* header */
+.haeder {
+  padding: 20px;
+}
+.haeder .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 60px;
+}
+.haeder .links {
+  position: relative;
+}
+.haeder .links .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+.haeder .links .icon span {
+  background-color: #333;
+  margin-bottom: 5px;
+  height: 2.4px;
+  width: 100%;
+  transition: 0.5s;
+}
+.haeder .links .icon span:nth-child(2) {
+  width: 65%;
+}
+.haeder .links:hover .icon span {
+  width: 100%;
+}
+.haeder .container .links ul {
+  list-style: none;
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 15px);
+  min-width: 180px;
+  display: none;
+}
+.haeder .container .links ul::before {
+  content: "";
+  border-width: 11px;
+  border-color: transparent transparent #f6f6f6 transparent;
+  border-style: solid;
+  position: absolute;
+  right: 5px;
+  top: -20px;
+}
+.haeder .container .links ul li {
+  padding: 0px;
+}
+.haeder .container .links ul li:not(:last-child) {
+  border-bottom: #ddd 1px solid;
+}
+.haeder .container .links a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  transition: 0.5s;
+}
+.haeder .links:hover ul {
+  display: block;
+}
+.haeder .links ul li a:hover {
+  margin-left: 8px;
+  color: #10cab7;
 }
