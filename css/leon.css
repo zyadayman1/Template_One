@@ -1,6 +1,7 @@
 /* start variables */
 :root {
   --main-color: #10cab7;
+  --branch-color: #2c4755;
 }
 /* end variables */
 
@@ -36,6 +37,32 @@
   }
 }
 /* end global rules */
+
+/* start components */
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -35px 0;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 60px;
+  }
+  .special-heading + p {
+    margin-top: -25px;
+    font-size: 16px;
+  }
+}
+/* end components */
 
 /* start header */
 .haeder {
@@ -172,3 +199,63 @@
   font-size: 17px;
 }
 /* end features */
+
+/* start Services */
+.services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px;
+  margin-top: 150px;
+}
+.services .services-content .srv {
+  display: flex;
+  margin-bottom: 40px;
+}
+.services .services-content .srv i {
+  color: var(--main-color);
+  flex-basis: 60px;
+}
+.services .services-content .srv .text {
+  flex: 1;
+}
+.services .services-content .srv .text h3 {
+  margin: 0 0 20px;
+}
+.services .services-content .srv .text p {
+  color: #777;
+  font-weight: 300;
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.services .services-content .col .image {
+  text-align: center;
+  position: relative;
+}
+.services .services-content .col .image::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: calc(100% + 80px);
+  background-color: var(--branch-color);
+  top: -40px;
+  right: 27px;
+  z-index: -1;
+}
+.services .services-content .col .image img {
+  width: 230px;
+}
+@media (max-width: 1199px) {
+  .image-hied {
+    display: none;
+  }
+}
+/* end Services */
