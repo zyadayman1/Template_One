@@ -1,5 +1,7 @@
 /* start variables */
-
+:root {
+  --main-color: #10cab7;
+}
 /* end variables */
 
 /* start global rules */
@@ -35,7 +37,7 @@
 }
 /* end global rules */
 
-/* header */
+/* start header */
 .haeder {
   padding: 20px;
 }
@@ -79,6 +81,7 @@
   top: calc(100% + 15px);
   min-width: 180px;
   display: none;
+  z-index: 10;
 }
 .haeder .container .links ul::before {
   content: "";
@@ -99,7 +102,7 @@
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: #333;
+  color: #2c4755;
   transition: 0.5s;
 }
 .haeder .links:hover ul {
@@ -109,3 +112,34 @@
   margin-left: 8px;
   color: #10cab7;
 }
+/* end header */
+
+/* start landing section */
+.landing {
+  background-image: url(../images/pexels-pixabay-355770.jpg);
+  /* background-repeat: round; */
+  background-size: cover;
+  height: calc(100vh - 64px);
+  position: relative;
+}
+.intro-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 320px;
+  max-width: 100%;
+}
+.intro-text h1 {
+  color: var(--main-color);
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+.intro-text p {
+  color: #2c4755;
+  line-height: 1.8;
+  font-size: 19px;
+}
+/* end landing section */
